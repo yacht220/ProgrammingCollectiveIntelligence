@@ -1,0 +1,4 @@
+	word1	word2	word3	word4
+blog1	5	2	0	1
+blog2	7	10	11	20
+blog3	4	1	1	2
