@@ -5,7 +5,7 @@ def readfile(filename):
   lines =[line for line in file(filename)] 
 
   # First line is the column titles
-  colnames=lines[0].strip().split('\t')[1:]
+  colnames=lines[0].strip().split('\t')[0:]
   rownames=[]
   data=[]
   for line in lines[1:]:
@@ -151,3 +151,12 @@ def drawnode(draw,clust,x,y,scaling,labels):
   else:
     # If this is an endpoint, draw the item label
     draw.text((x+5,y-7),labels[clust.id],(0,0,0))
+
+def rotatematrix(data):    
+  newdata=[]
+  for i in range(len(data[0])):
+    newrow=[data[j][i] for j in range(len(data))]
+    newdata.append(newrow)
+  return newdata
+
+
